@@ -9,7 +9,10 @@ type HistoryContainerProps = {
   currency: string;
 };
 
-export const HistoryContainer = ({ token, currency }: HistoryContainerProps) => {
+export const HistoryContainer = ({
+  token,
+  currency,
+}: HistoryContainerProps) => {
   const [isHistoryLoading, setIsHistoryLoading] = useState<boolean>(false);
   const [history, setHistory] = useState<PriceHistory[]>([]);
   const loadHistory = async () => {
@@ -43,7 +46,11 @@ export const HistoryContainer = ({ token, currency }: HistoryContainerProps) => 
             width: "100%",
           }}
         >
-          {history && history.length > 0 && <HistoryTable items={history} />}
+          {history && history.length > 0 && (
+            <>
+              <HistoryTable items={history} refetch={loadHistory} />
+            </>
+          )}
         </div>
       )}
     </>

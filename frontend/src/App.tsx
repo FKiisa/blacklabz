@@ -13,7 +13,7 @@ export default function App() {
       style={{
         width: 600,
         maxWidth: "100%",
-        margin: "32px",
+        margin: "32px 8px 0",
         padding: "16px",
         display: "flex",
         flexDirection: "column",

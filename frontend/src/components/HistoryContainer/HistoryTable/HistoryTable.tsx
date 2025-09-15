@@ -1,4 +1,5 @@
 import { generateUniqueKey, calculateLastModified } from "../../../util/utils";
+import { Button } from "../../Button/Button";
 
 export type HistoryTableProps = {
   items: {
@@ -6,9 +7,10 @@ export type HistoryTableProps = {
     price: number;
     at: string;
   }[];
+  refetch: () => void;
 };
 
-export const HistoryTable = ({ items }: HistoryTableProps) => {
+export const HistoryTable = ({ items, refetch }: HistoryTableProps) => {
   const tableHeadStyle = {
     textAlign: "left" as const,
     padding: "8px",
@@ -27,6 +29,9 @@ export const HistoryTable = ({ items }: HistoryTableProps) => {
           <th style={tableHeadStyle}>Token Pair</th>
           <th style={tableHeadStyle}>Price</th>
           <th style={tableHeadStyle}>Last Updated</th>
+          <Button withBackground={false} onClick={refetch}>
+            🔄
+          </Button>
         </tr>
       </thead>
       <tbody>
