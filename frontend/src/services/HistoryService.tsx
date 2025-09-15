@@ -1,4 +1,4 @@
-import type { PriceHistory } from "../../types/history";
+import type { PriceHistory } from "../types/history";
 
 export async function getHistory(token: string, currency: string, limit = 5) {
   const res = await fetch(

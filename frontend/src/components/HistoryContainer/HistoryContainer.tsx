@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { PriceHistory } from "../../types/history";
 import { HistoryTable } from "./HistoryTable/HistoryTable";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
-import { getHistory } from "./HistoryService";
+import { getHistory } from "../../services/HistoryService";
 
 type HistoryContainerProps = {
   token: string;

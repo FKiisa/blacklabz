@@ -3,7 +3,7 @@ import { Label } from "../Label/Label";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 import { TokenPair } from "../TokenPair/TokenPair";
 import { Button } from "../Button/Button";
-import { getTokenPair } from "./PriceService";
+import { getTokenPair } from "../../services/PriceService";
 
 export type PriceContainerProps = {
   token: string;

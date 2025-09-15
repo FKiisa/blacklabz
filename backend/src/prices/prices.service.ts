@@ -57,7 +57,13 @@ export class PricesService {
   }
 
   async getHistory(token: string, currency: string, limit: number) {
-    const tokenPair = `${token}/${currency}`;
+    const tokenId = toTokenId(token);
+    const currencyId = currency.toLowerCase();
+
+    if (!isSupportedCurrency(currencyId)) {
+      throw new BadRequestException(`Unsupported currency: ${currency}`);
+    }
+    const tokenPair = `${tokenId}/${currencyId}`;
     const { rows } = await this.pg.query<PriceRow>(
       `SELECT token, currency, pair, price, at
          FROM prices

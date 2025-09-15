@@ -8,8 +8,6 @@ import {
   Query,
 } from '@nestjs/common';
 import { PricesService } from './prices.service';
-import { isSupportedCurrency } from './types/currencies';
-import { toTokenId } from './types/tokenMap';
 
 @Controller('prices')
 export class PricesController {
@@ -33,13 +31,7 @@ export class PricesController {
         'Query params "token" and "currency" are required',
       );
     }
-    const tokenId = toTokenId(token);
-    const currencyId = currency.toLowerCase();
-
-    if (!isSupportedCurrency(currencyId)) {
-      throw new BadRequestException(`Unsupported currency: ${currency}`);
-    }
-    const safeLimit = Math.min(Math.max(limit, 1), 500);
-    return this.pricesService.getHistory(tokenId, currencyId, safeLimit);
+    const safeLimit = Math.min(Math.max(limit, 1), 50);
+    return this.pricesService.getHistory(token, currency, safeLimit);
   }
 }

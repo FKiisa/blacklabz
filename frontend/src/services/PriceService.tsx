@@ -1,4 +1,4 @@
-import type { PairResponse } from "../../types/pairResponse";
+import type { PairResponse } from "../types/pairResponse";
 
 export async function getTokenPair(token: string, currency: string) {
   const res = await fetch(
