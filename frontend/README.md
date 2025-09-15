@@ -55,6 +55,6 @@ frontend/
 |   ├── App.tsx     # Main component that will render subcomponents
 │   ├── index.css   # Main body/html/root css
 ├── package.json    # Project metadata and dependencies
-├── tsconfig*.json       # TypeScript configuration files
+├── tsconfig*.json  # TypeScript configuration files
 └── README.md       # Project documentation
 ```
