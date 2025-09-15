@@ -23,8 +23,8 @@ Ensure you have the following installed:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/black-labz-task.git
-    cd black-labz-task/frontend
+    git clone https://github.com/FKiisa/blacklabz.git
+    cd blacklabz/frontend
     ```
 
 2. Install dependencies:
@@ -55,5 +55,6 @@ frontend/
 |   ├── App.tsx     # Main component that will render subcomponents
 │   ├── index.css   # Main body/html/root css
 ├── package.json    # Project metadata and dependencies
+├── tsconfig*.json       # TypeScript configuration files
 └── README.md       # Project documentation
 ```
