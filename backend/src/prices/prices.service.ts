@@ -6,7 +6,7 @@ import { ApiResponse, PriceResult, PriceRow } from './types/prices.types';
 import { isSupportedCurrency } from './types/currencies';
 import { toTokenId } from './types/tokenMap';
 import { Pool } from 'pg';
-import { PG } from 'src/db/db.module';
+import { PG } from '../db/db.module';
 
 @Injectable()
 export class PricesService {

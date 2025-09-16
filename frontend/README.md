@@ -8,6 +8,7 @@ This is the frontend of the Black Labz Task project. It is responsible for the u
 - [Installation](#installation)
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
+- [Unit Test](#unit-tests)
 
 ## Getting Started
 
@@ -57,4 +58,11 @@ frontend/
 ├── package.json    # Project metadata and dependencies
 ├── tsconfig*.json  # TypeScript configuration files
 └── README.md       # Project documentation
+```
+
+## Unit Tests
+
+To run tests run the following
+```bash
+npm run test
 ```

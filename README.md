@@ -2,6 +2,8 @@
 
 This project fetches live crypto/fiat prices (e.g., TON/USDT) from CoinGecko, caches them for speed, persists them in PostgreSQL, and visualizes them in a simple React frontend.
 
+In total this project took me approximately 5-6 hours to complete.
+
 ## Features
 
 - **NestJS backend**

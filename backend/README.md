@@ -11,6 +11,7 @@ This is the backend of the **Black Labz Task** project. It provides the API laye
 - [Environment Variables](#environment-variables)
 - [API Endpoints](#api-endpoints)
 - [Folder Structure](#folder-structure)
+- [Unit Test](#unit-tests)
 
 ## Getting Started
 
@@ -115,4 +116,11 @@ backend/
 ├── package.json         # Project metadata and dependencies
 ├── tsconfig*.json       # TypeScript configuration files
 └── README.md            # Backend documentation
+```
+
+## Unit Tests
+
+To run tests run the following
+```bash
+npm run test
 ```
