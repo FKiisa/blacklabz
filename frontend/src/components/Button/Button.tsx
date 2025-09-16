@@ -5,20 +5,27 @@ type ButtonProps = {
   onClick: () => void;
   isLoading?: boolean;
   children?: ReactNode;
-  withBackground?: boolean;
+  height?: number;
+  width?: number | string;
 };
 
-export const Button = ({ children, onClick, isLoading, withBackground = true }: ButtonProps) => {
+export const Button = ({
+  children,
+  onClick,
+  isLoading,
+  height = 40,
+  width = "90%",
+}: ButtonProps) => {
   return (
     <button
       style={{
-        width: "90%",
-        height: 40,
+        width: width,
+        height: height,
         padding: "4px 8px",
         border: "none",
         borderRadius: 4,
-        background: withBackground ? "#0070f3" : "transparent",
-        color: withBackground ? "#fff" : "#000",
+        background: "#0070f3",
+        color: "#fff",
         cursor: "pointer",
         display: "flex",
         justifyContent: "center",

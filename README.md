@@ -3,6 +3,7 @@
 This project fetches live crypto/fiat prices (e.g., TON/USDT) from CoinGecko, caches them for speed, persists them in PostgreSQL, and visualizes them in a simple React frontend.
 
 ## Features
+
 - **NestJS backend**
   - `GET /prices/:token/:currency` → live price
   - **Caching** (1 min TTL) with `@nestjs/cache-manager`
@@ -19,23 +20,36 @@ This project fetches live crypto/fiat prices (e.g., TON/USDT) from CoinGecko, ca
 
 ---
 
-
 ## Setup
+
 ### Prerequisites
+
 - Node - v22.19.0
 - Docker Daemon needs to be running (e.g. Docker Desktop)
-### 1. Start database
+
+### 1. Clone the project
+
+```bash
+git clone https://github.com/FKiisa/blacklabz.git
+```
+
+### 2. Start database
+
 ```bash
 docker-compose up -d
 ```
-### 2. Install and start backend
+
+### 3. Install and start backend
+
 ```bash
 cd backend
 cp .env.example .env
 npm install
 npm run start:dev
 ```
-### 3. Install and start frontend
+
+### 4. Install and start frontend
+
 ```bash
 cd frontend
 npm install
