@@ -21,7 +21,15 @@ In total this project took me approximately 5-6 hours to complete.
   - `prices` table auto-created on startup
   - Stores `(token, currency, pair, price, at)`
 
----
+## Tech Explanation
+### NestJS
+I went with NestJS because I wanted to challenge myself with something new. It gives a clear structure, built-in TypeScript, and good patterns like modules and dependency injection. That makes the project easier to grow later while keeping the code clean.
+
+### PostgreSQL
+I picked PostgreSQL because it’s reliable, easy to work with, and a solid choice for handling structured data like tokens or price history. It also plays nicely with Docker and can scale if the project grows.
+
+### ReactJS
+I went with React because I know it well and honestly, I just enjoy working with it. It’s fast to build UIs, has a huge ecosystem, and felt like the natural fit here. Also I'm a little fanboy
 
 ## Setup
 
@@ -59,3 +67,13 @@ cd frontend
 npm install
 npm run dev
 ```
+
+## Future Improvements
+- Add more trading pairs and multiple providers with fallback (allow adding custom pairs)
+- Store and display historical price data with charts
+- Improve error handling and show better messages in the UI
+- Use Redis for caching instead of in-memory
+- Add more tests (backend + frontend) for better coverage
+- Translation support
+- Dockerize all services
+- Deploy to AWS/AzDo via IaC (terraform)
