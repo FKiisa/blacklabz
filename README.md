@@ -16,6 +16,7 @@ In total this project took me approximately 5-6 hours to complete.
   - Select token + currency
   - Display current price & when was it last updated
   - Show recent history in a table
+  - Component/Service tests
 - **Postgres DB** (via Docker Compose)
   - `prices` table auto-created on startup
   - Stores `(token, currency, pair, price, at)`
@@ -37,6 +38,7 @@ git clone https://github.com/FKiisa/blacklabz.git
 
 ### 2. Start database
 
+In the project root
 ```bash
 docker-compose up -d
 ```
